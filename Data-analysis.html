@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+        <title>物联网农作物管理平台</title>
+            
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/media-player.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/jquery.hotspot.css">
+         <link href="css/menu.css" rel="stylesheet">
+	 </head>
+        <style type="text/css">
+			.r_out {width:120px; height:120px; border:2px solid #d9d9d9; background:#fff; box-shadow:3px 3px 5px #bfbfbf; -webkit-box-shadow:3px 3px 5px #bfbfbf; -moz-box-shadow:3px 3px 5px #bfbfbf; -ms-box-shadow:3px 3px 5px #bfbfbf; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms_border-radius:50%; display:inline-block; margin-right:90px; position:relative;}
+    .r_out p {position:absolute; /**bottom:-50px;*/ color:#fff; text-align:center; margin:0 auto; width:100%; font-size:14px; line-height:1.5; font-weight:bold;}
+
+    .r_in {width:120px; height:120px; border:10px solid #fff; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms_border-radius:50%; overflow:hidden; position:relative;}
+    .r_c {width:120px; height:120px; position:absolute; bottom:0; left:0; height:0;}
+    .c1 {background:#fbad4c;}
+    .c2 {background:#fff143;}
+    .c3 {background:#c9dd22;}
+    .c4 {background:#00e079;}
+    .c5 {background:#0eb83a;}
+    .r_num {color:#404040; font-size:23px; line-height:1.5; font-weight:bold; position:absolute; top:50%; margin-top:-25px; text-align:center; width:100%;}
+	       
+	        #triangle-right {
+			    width: 0;
+			    height: 0;
+			    border-top: 15px solid transparent;
+			    border-left: 15px solid #DB241C;
+			    border-bottom: 15px solid transparent;
+			}
+			.alert-lost{
+			padding:5px;
+			margin-top:10px;
+			margin-bottom:-8px;
+			font-size:14px;
+			}
+				
+        </style>
+<body id="skin-blur-blue">
+	<!-- 头部 -->
+	<header id="header" class="media">
+		<a href="" id="menu-toggle"></a>
+		<a class="logo pull-left" href="index.html" style="width: 233px">物联网农作物管理平台</a>
+
+		<div class="media-body">
+			<div class="media" id="top-menu">
+				<div class="pull-left tm-icon">
+					<a data-drawer="messages" class="drawer-toggle" href="">
+						<i class="sa-top-message"></i>
+						<i class="n-count animated">5</i>
+						<span>实时消息</span>
+					</a>
+				</div>
+				<div class="pull-left tm-icon">
+					<a data-drawer="notifications" class="drawer-toggle" href="">
+						<i class="sa-top-updates"></i>
+						<i class="n-count animated">9</i>
+						<span>告警信息</span>
+					</a>
+				</div>
+
+
+
+				<div id="time" class="pull-right">
+					<span id="hours"></span>
+					:
+					<span id="min"></span>
+					:
+					<span id="sec"></span>
+				</div>
+
+				<div class="media-body">
+					<input type="text" class="main-search">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="clearfix"></div>
+
+	<section id="main" class="p-relative" role="main">
+
+		<!-- 侧边 -->
+		<aside id="sidebar" style="width: 233px">
+			<!-- Sidbar Widgets -->
+			<div class="side-widgets overflow">
+				<!-- Profile Menu -->
+				<!-- 视频 -->
+				<div class="tile">
+					<h2 class="tile-title">行业动态</h2>
+					<div class="tile-config dropdown">
+						<a data-toggle="dropdown" href="" class="tooltips tile-menu" title=""
+							data-original-title="Options"></a>
+						<ul class="dropdown-menu pull-right text-right">
+							<li><a href="">编辑</a></li>
+							<li><a href="">删除</a></li>
+						</ul>
+					</div>
+					<video width="100%" height="100%" id="multiCodec" poster="img/media-player/media-player-poster.jpg"
+						controls preload="none">
+						<!-- id could be any according to you -->
+						<!-- MP4 source must come first for iOS -->
+						<source type="video/mp4" src="media/Mobiledepre480.MP4" />
+						<!-- WebM for Firefox 4 and Opera -->
+						<source type="video/webm" src="media/echohereweare.webm" />
+						<!-- OGG for Firefox 3 -->
+						<source type="video/ogg" src="media/echohereweare.ogv" />
+						<!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+						<object width="100%" height="100%" type="application/x-shockwave-flash"
+							data="media/flashmediaelement.swf">
+							<param name="movie" value="media/flashmediaelement.swf" />
+							<param name="flashvars"
+								value="controls=true&amp;poster=img/media-player/media-player-poster.jpg&amp;file=media/Mobiledepre480.MP4" />
+							<!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+							<img src="img/media-player/media-player-poster.jpg" width="100%" height="100%" alt="Media"
+								title="No video playback capabilities" />
+						</object>
+					</video>
+				</div>
+
+				<!-- Calendar -->
+				<div class="s-widget m-b-25">
+					<div id="sidebar-calendar"></div>
+				</div>
+
+				<!-- 访客量 -->
+				<div class="s-widget m-b-25">
+					<h2 class="tile-title">
+						访客
+					</h2>
+					<div class="alert alert-success alert-icon">
+						<span style="margin-left:8px;">今日访问:1893次</span>
+						<i class="icon">&#61845;</i>
+					</div>
+
+					<div class="alert alert-info alert-icon">
+						<span style="margin-left:8px;">累计访问:14562次</span>
+						<i class="icon">&#61770;</i>
+					</div>
+				</div>
+				<!--天气预报-->
+				<div class="panel  weather-info">
+					<div class="turquoise-bg white-text top-radius">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-5">
+									<div class="text-center">
+										<i class="big-icon  ico-cloudy"></i>
+									</div>
+								</div>
+								<div class="col-xs-7">
+									<div class="text-center">
+										<div class="degree">-4</div>
+										<div>多云,北风3-4级</div>
+										<div>实时气温-4℃，较冷</div>
+										<div class="d-value"><span>-9</span> / <span>14</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="weather-location dark-turquoise-bg">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-lg-12">
+									<input type="text" placeholder="位置..." class="form-control find-loc">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="panel-body">
+						<ul class="weather-forecast ">
+							<li class="first"><a id="su" href="javascript:;"><strong>日</strong><span><i
+											class="ico-cloudy"></i></span><span class="d-value">31</span></a></li>
+							<li><a id="mo" href="javascript:;"><strong>一</strong><span><i
+											class=" ico-rainy2"></i></span><span class="d-value">20</span></a></li>
+							<li><a class="active" id="tu" href="javascript:;"><strong>二</strong><span><i
+											class=" ico-lightning3"></i></span><span class="d-value">27</span></a></li>
+							<li><a id="we" href="javascript:;"><strong>三</strong><span><i
+											class=" ico-sun3"></i></span><span class="d-value">23</span></a></li>
+							<li><a id="th" href="javascript:;"><strong>四</strong><span><i
+											class=" ico-snowy3"></i></span><span class="d-value">26</span></a></li>
+							<li><a id="fr" href="javascript:;"><strong>五</strong><span><i
+											class=" ico-cloudy "></i></span><span class="d-value">32</span></a></li>
+							<li class="last"><a id="sa" href="javascript:;"><strong>六</strong><span><i
+											class=" ico-lightning3 "></i></span><span class="d-value">24</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 侧边栏-->
+			<ul class="list-unstyled side-menu">
+				<li class="active">
+					<a class="sa-side-home" href="index.html">
+						<span class="menu-item">园区管理</span>
+					</a>
+				</li>
+				<li>
+					<a class="sa-side-typography" href="Data-analysis.html">
+						<span class="menu-item">数据分析</span>
+					</a>
+				</li>
+				<li>
+					<a class="sa-side-widget" href="Monitoring-system.html">
+						<span class="menu-item">监测系统</span>
+					</a>
+				</li>
+				<li>
+					<a class="sa-side-form" href="#">
+						<span class="menu-item">用户预约</span>
+					</a>
+				</li>
+				
+				<li>
+					<a class="sa-side-photos" href="device-management.html">
+						<span class="menu-item">设备管理</span>
+					</a>
+				</li>
+				<li>
+					<a class="sa-side-folder" href="./气象预报大数据平台/index.html">
+						<span class="menu-item">大屏展示</span>
+					</a>
+				</li>
+				<li>
+					<a class="sa-side-calendar" href="Expense-management.html">
+						<span class="menu-item">费用管理</span>
+					</a>
+				</li>
+				<li>
+					<a class="sa-side-page" href="user.html">
+						<span class="menu-item">用户管理</span>
+					</a>
+				</li>
+			</ul>
+
+		</aside>
+
+		<!-- Content -->
+		<section id="content" class="container" style="margin-left: 233px">
+
+			<!-- Messages Drawer -->
+			<div id="messages" class="tile drawer animated">
+				<div class="listview narrow">
+					<div class="media">
+						<a href="">新消息</a>
+						<span class="drawer-close">&times;</span>
+
+					</div>
+					<div class="overflow" style="height: 254px">
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/1.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">调度班长 - 2分钟前</small><br>
+								<a class="t-overflow" href="">湿度数据采集异常，请工作人员检查。</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/2.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">值班专员 - 15分钟前</small><br>
+								<a class="t-overflow" href="">办公室湿度系统出现异常，请排除故障!</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/3.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">自动化班长 - 3小时前</small><br>
+								<a class="t-overflow" href="">湿度分布图以及报表数据有误差，请核对</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/4.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">值班人员 - 3小时前</small><br>
+								<a class="t-overflow" href="">温度显示过高，告警系统启动，请及时查看.</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/1.jpg" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">办公室 - 4小时前</small><br>
+								<a class="t-overflow" href="">请各部门提供上周农田统计数据，本周将针对防病害进行技术优化</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/2.jpg" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">值班专员 - 5小时前</small><br>
+								<a class="t-overflow" href="">自动化班提供1#总耗电量远远超过预测值，请再次核对数据并及时告知！</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/3.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">办公室 - 6小时前</small><br>
+								<a class="t-overflow" href="">请提供“温度系统数据比”和“湿度系统数据比”两组数据</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/4.jpg" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">办公室专责 - 6小时前</small><br>
+								<a class="t-overflow" href="">请调度班提供2#喷洒设备和3#监测设备的统计数据.</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/5.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">网管中心 - 7小时前</small><br>
+								<a class="t-overflow" href="">今天凌晨将进行断网检修，请各部门及时下载相关材料</a>
+							</div>
+						</div>
+					</div>
+					<div class="media text-center whiter l-100">
+						<a href=""><small>查看所有</small></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 折叠筐 -->
+			<div id="notifications" class="tile drawer animated">
+				<div class="listview narrow">
+					<div class="media">
+						<a href="">实时告警</a>
+						<span class="drawer-close">&times;</span>
+					</div>
+					<div class="overflow" style="height: 254px">
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/1.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">值班人员 - 35秒前</small><br>
+								<a class="t-overflow" href="">温度系统数据采集异常</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/3.jpg" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">调度值班室 - 1分钟前</small><br>
+								<a class="t-overflow" href="">夜间照明系统出现故障，请立即检修！</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/3.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">办公室 - 2分钟前</small><br>
+								<a class="t-overflow" href="">1#机组无法正常工作，异响</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/4.png" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">值班专责 - 3分钟前</small><br>
+								<a class="t-overflow" href="">1#温度传感器中级故障告警，请立即前往查看</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/4.jpg" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">值班人员 - 4分钟前</small><br>
+								<a class="t-overflow" href="">#0154号设备失灵，请查看是否故障</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="pull-left">
+								<img width="40" src="img/profile-pics/2.jpg" alt="">
+							</div>
+							<div class="media-body">
+								<small class="text-muted">办公室专责 - 5分钟前</small><br>
+								<a class="t-overflow" href="">新风系统告警，无法正常工作</a>
+							</div>
+						</div>
+					</div>
+					<div class="media text-center whiter l-100">
+						<a href=""><small>查看所有</small></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Breadcrumb -->
+			<ol class="breadcrumb hidden-xs">
+				<li><a href="#">主页</a></li>
+				<li><a href="#">管理平台</a></li>
+				<li class="active">数据分析</li>
+			</ol>
+			<h4 class="page-title">数据分析</h4>
+			                
+			                <div class="robin_circle" style="margin: 6px 0px 18px 20px;">
+			                    <div class="r_out">
+			                        <div class="r_in">
+			                            <div class="r_c c1"></div>
+			                            <div class="r_num">4000</div>
+			                        </div>
+			                        <p>气象</p><br>
+			                        <div class="alert alert-success alert-lost">
+			                      		  实际值：3012
+			                   		</div>
+			                   		<div class="alert alert-warning alert-lost">
+			                      		  计划值：3805
+			                   		</div>
+			                    </div>
+			                    <div class="r_out">
+			                        <div class="r_in">
+			                            <div class="r_c c2"></div>
+			                            <div class="r_num">40</div>
+			                        </div>
+			                        <p>空气湿度，温度</p><br>
+			                        <div class="alert alert-success alert-lost" >
+			                      		  实际值：21
+			                   		</div>
+			                   		<div class="alert alert-warning alert-lost" >
+			                      		  计划值：40
+			                   		</div>
+			                    </div>
+			                    <div class="r_out">
+			                        <div class="r_in">
+			                            <div class="r_c c3"></div>
+			                            <div class="r_num">5000</div>
+			                        </div>
+			                        <p>突然湿度，温度</p><br>
+			                        <div class="alert alert-success alert-lost" >
+			                      		  实际值：4200
+			                   		</div>
+			                   		<div class="alert alert-warning alert-lost" >
+			                      		  计划值：5000
+			                   		</div>
+			
+			                    </div>
+			                    <div class="r_out">
+			                        <div class="r_in">
+			                            <div class="r_c c4"></div>
+			                            <div class="r_num">8000</div>
+			                        </div>
+			                        <p>光照</p><br>
+			                        <div class="alert alert-success alert-lost">
+			                      		  实际值：6015
+			                   		</div>
+			                   		<div class="alert alert-warning alert-lost" >
+			                      		  计划值：6000
+			                   		</div>
+			
+			                    </div>
+			                    <div class="r_out">
+			                        <div class="r_in">
+			                            <div class="r_c c5"></div>
+			                            <div class="r_num">5级</div>
+			                        </div>
+			                        <p>风力</p><br>
+			                        <div class="alert alert-success alert-lost" >
+			                      		  实际值：2级
+			                   		</div>
+			                   		<div class="alert alert-warning alert-lost" >
+			                      		  计划值：3级
+			                   		</div>
+			                    </div>
+			                </div>
+			                
+			                <hr class="whiter" />
+			                
+			                <!-- Main Widgets -->
+			               
+			                <div class="block-area">
+			                 
+			                    <div class="row">
+			                    <div class="tab-content" style="min-height: 260px;">
+									<div id="fwq" class="tab-pane active">
+			                        <div class="col-md-12">
+			                            <!-- Main Chart -->
+			                            <div class="tile">
+			                            	<div style="width:8%;float:left">
+			                            	<ul class="nav" style="padding-top:30px">
+											  <li class="active" style="height:90px;font-size: 15px;background-color:#E64C65">
+											    
+											    <a href="#" style="padding-top:50px;">周视图</a>
+											  </li>
+											  <li style="height:90px;font-size: 15px;background-color:#E64C65 "><a href="#" style="padding-top:30px;">月视图</a></li>
+											  <li style="height:90px;font-size: 15px;background-color:#E64C65 "><a href="#">年视图</a></li>
+											</ul>
+											</div>
+			                                <div style="float:left;width:70%;height:350px" id="energyLost">
+			                                </div>
+			                                <div style="width:22%;float:left;height:300px;padding-top:30px">
+			                            	<div style="background-color: #CC324B;width:100%;height:100%;">
+			                            	<div style="padding-top:50px;text-align: center"><h2>阶段平均统计</h2></div>
+			                            	<div style="padding-top:10px;padding-left:20px"><span style="font-size: 14px">温度  　　31~40°C</span></div>
+			                            	<div style="padding-top:10px;padding-left:20px"><span style="font-size: 14px">湿度  　　1000ml</span></div>
+			                            	<div style="padding-top:10px;padding-left:20px"><span style="font-size: 14px">光度  　　1000 </span></div>
+			                            	<div style="padding-top:10px;padding-left:20px"><span style="font-size: 14px">同比　　　　↓ 10%</span></div>
+			                            	</div>
+											</div>
+			                            </div>
+									</div><!-- col -->
+									</div>
+									<div id="jhj" class="tab-pane">
+			                        <div class="col-md-12">
+			                            <!-- Main Chart -->
+			                            <div class="tile">
+			                                <h2 class="tile-title"></h2>
+			                                <div class="tile-config dropdown">
+			                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                    <ul class="dropdown-menu pull-right text-right">
+			                                       
+			                                        <li><a href="">Refresh</a></li>
+			                                        <li><a href="">Settings</a></li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+									</div><!-- col -->
+									</div>
+								</div>
+								</div><!-- row -->
+			                            <!--  Recent Postings -->
+			                            <div class="row">
+			                                <div class="col-md-3">
+			                                    <div class="tile">
+			                                        <h2 class="tile-title">气体成分</h2>
+			                                        <div class="tile-config dropdown">
+			                                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                            <ul class="dropdown-menu animated pull-right text-right">
+			                                                <li><a href="">Refresh</a></li>
+			                                                <li><a href="">Settings</a></li>
+			                                            </ul>
+			                                        </div>
+			           							 <div id="test" style="width: 100%;height:300px;"></div>
+			           							  <!-- <ul class="nav nav-tabs" style="padding-left:10%">
+														<li class="active" style="width:30%">
+															<a data-toggle="tab" href="#fwq"
+																>机房</a>
+														</li>
+														<li style="width:30%">
+															<a data-toggle="tab"  href="#jhj"
+																>油机</a>
+														</li>
+														<li style="width:30%">
+															<a data-toggle="tab"  href="#jhj"
+																>空调箱</a>
+														</li>
+													</ul> -->
+			                                    </div>
+			                                </div>
+			                                <div class="col-md-3">
+			                                    <div class="tile">
+			                                        <h2 class="tile-title">空气湿度</h2>
+			                                        <div class="tile-config dropdown">
+			                                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                            <ul class="dropdown-menu animated pull-right text-right">
+			                                                <li><a href="">Refresh</a></li>
+			                                                <li><a href="">Settings</a></li>
+			                                            </ul>
+			                                        </div>
+													<div id="hallLost" style="width: 100%;height:300px;"></div>
+			                                    </div>
+			                                </div>
+			                                <div class="col-md-3">
+			                                    <div class="tile">
+			                                        <h2 class="tile-title">土壤湿度</h2>
+			                                        <div class="tile-config dropdown">
+			                                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                            <ul class="dropdown-menu animated pull-right text-right">
+			                                                <li><a href="">Refresh</a></li>
+			                                                <li><a href="">Settings</a></li>
+			                                            </ul>
+			                                        </div>
+													<div id="stationLost" style="width: 100%;height:300px;"></div>
+			                                    </div>
+			                                </div>
+			                                <!-- Tasks to do -->
+			                                <div class="col-md-3">
+			                                    <div class="tile">
+			                                        <h2 class="tile-title">光照</h2>
+			                                        <div class="tile-config dropdown">
+			                                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                            <ul class="dropdown-menu pull-right text-right">
+			                                                <li id="todo-refresh"><a href="">Refresh</a></li>
+			                                                <li id="todo-clear"><a href="">Clear All</a></li>
+			                                            </ul>
+			                                        </div>
+			                                        <div style="min-height:300px">
+			                                        <div style="padding-top:50px;padding-right:50px;" id="cur">
+			                                        	
+				                                        <div style="width:60px; height:30px;background:#006A3C;border-radius:15px;float:right"><div class="triangle-left" style="float:right;"></div></div>
+				                                       	<span style="float:right">1级</span>
+				                                       	<div style="clear:both"></div>
+				                                        <span style="float:right">当前</span>
+			                                        </div>
+			                                        <ul class="nav" style="padding-top:30px;padding-left:50px;">
+													  <li class="active">
+														<span style="float:left;padding-left:30px;">低</span><div style="width:60px; height:30px;background:#006A3C;border-radius:15px;float:left"></div><div id="triangle-right" style="border-left: 20px solid #006A3C;float:left"></div>
+													 	<span >1级</span>
+													  </li>
+													  <li>
+													  <div style="clear:both"></div>
+													  <br>
+													  	<span style="float:left;padding-left:30px">中等　</span><div style="width:80px; height:30px;background:#8EC73C;border-radius:15px;float:left;"></div><div id="triangle-right" style="border-left: 20px solid #8EC73C;float:left"></div>
+													 	<span >2级</span>
+													  </li>										  
+													  <li>
+													  <div style="clear:both"></div>
+													  <br>
+													  	<span style="float:left;padding-left:30px">高</span><div style="width:100px; height:30px;background:#DB241C;border-radius:25px;float:left;"></div><div id="triangle-right" style="border-left: 20px solid #DB241C;float:left"></div>
+													  	<span >3级</span>
+													  </li>
+													</ul>
+													</div>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                            
+			                              <div class="row">
+			                                <div class="col-md-3">
+			                                    <div class="tile">
+			                                        <h2 class="tile-title">风力</h2>
+			                                        <div class="tile-config dropdown">
+			                                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                            <ul class="dropdown-menu animated pull-right text-right">
+			                                                <li><a href="">Refresh</a></li>
+			                                                <li><a href="">Settings</a></li>
+			                                            </ul>
+			                                        </div>
+			           							 <div id="buildingLost" style="width: 100%;height:300px;"></div>
+			                                    </div>
+			                                </div>
+			                                <div class="col-md-3">
+			                                    <div class="tile">
+			                                        <h2 class="tile-title">光谱传感</h2>
+			                                        <div class="tile-config dropdown">
+			                                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                            <ul class="dropdown-menu animated pull-right text-right">
+			                                                <li><a href="">Refresh</a></li>
+			                                                <li><a href="">Settings</a></li>
+			                                            </ul>
+			                                        </div>
+													<div id="floorLost" style="width: 100%;height:300px;"></div>										
+			                                    </div>
+			                                </div>
+			                                <div class="col-md-3">
+			                                    <div class="tile">
+			                                        <h2 class="tile-title">光谱传感</h2>
+			                                        <div class="tile-config dropdown">
+			                                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                            <ul class="dropdown-menu animated pull-right text-right">
+			                                                <li><a href="">Refresh</a></li>
+			                                                <li><a href="">Settings</a></li>
+			                                            </ul>
+			                                        </div>
+													<div id="departmentLost" style="width: 100%;height:300px;"></div>
+			                                    </div>
+			                                </div>
+			                                <!-- Tasks to do -->
+			                                <div class="col-md-3">
+			                                    <div class="tile">
+			                                        <h2 class="tile-title">光谱传感</h2>
+			                                        <div class="tile-config dropdown">
+			                                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+			                                            <ul class="dropdown-menu pull-right text-right">
+			                                                <li id="todo-refresh"><a href="">Refresh</a></li>
+			                                                <li id="todo-clear"><a href="">Clear All</a></li>
+			                                            </ul>
+			                                        </div>
+			                                       <div id="departmentRank" style="width: 100%;height:300px;"></div>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                            
+			                            <div class="clearfix"></div>
+			<!--                         </div> --><!-- 12 -->                       
+			                        <div class="clearfix"></div>
+			<!--                     </div> --><!-- row -->
+			                </div>
+			                
+			           
+			            </section>
+			        </section>
+			        
+			        <!-- Javascript Libraries -->
+			        <!-- jQuery -->
+			        <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> <!-- jQuery Library -->
+			        <script src="http://www.jq22.com/jquery/jquery-ui-1.11.0.js"></script> <!-- jQuery UI -->
+			        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+			
+			        <!-- Bootstrap -->
+			        <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+			
+			        <!-- Charts -->
+			        <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+			        <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+			        <script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+			        <script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+			
+			        <script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+			        <script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+			        <script src="js/charts.js"></script> <!-- All the above chart related functions -->
+			
+			        <!-- Map -->
+			        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+			        <script src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+			
+			        <!--  Form Related -->
+			        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+			        <!--Media Player-->
+			        <script src="js/media-player.min.js"></script> <!-- USA Map for jVectorMap -->
+			        <!-- UX -->
+			        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+			
+			        <!-- Other -->
+			        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+			        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+			        
+			
+			        <!-- All JS functions -->
+			        <script src="js/functions.js"></script>
+			        <script type="text/javascript" src="js/echarts/echarts.min.js"></script>
+			        <script type="text/javascript">
+			        
+			        $(document).ready(function(){
+			            $(".c1").animate({
+			                height: "70%"
+			            },1000);
+			            $(".c2").animate({
+			                height: "50%"
+			            },1000);
+			            $(".c3").animate({
+			                height: "33%"
+			            },1000);
+			            $(".c4").animate({
+			                height: "23%"
+			            },1000);
+			            $(".c5").animate({
+			                height: "13%"
+			            },1000)
+			            //$('#container1').hotSpot();
+			        });
+			        // 基于准备好的dom，初始化echarts实例
+			        var myChart3 = echarts.init(document.getElementById('energyLost'));
+			        var option3 = {
+			        	    title : {
+			        	        text: '2022-02-27'
+			        	    },
+			        	    tooltip : {
+			        	        trigger: 'axis',
+			        	        textStyle:{color:'#fff'}
+			        	    },
+			        	    legend: {
+			        	        data:['分析图','']
+			        	    },
+			        	    toolbox: {
+			        	        show : true,
+			        	        feature : {
+			        	            //dataZoom: {},
+			        	            //dataView: {readOnly: false},
+			        	            //magicType: {type: ['line', 'bar']},
+			        	            //restore: {},
+			        	            saveAsImage: {}
+			        	        }
+			        	    },
+			        	    xAxis : [
+			        	        {
+			        	            type : 'category',
+			        	            boundaryGap : true,
+			        	            data : ['00:00','04:00','08:00','12:00','16:00','20:00'],
+			        	            splitLine:{show:false},
+			        	        	axisLabel:{textStyle:{color:'#fff'}}
+			        	        }
+			        	    ],
+			        	    yAxis : [
+			        	             {
+			             	            type : 'value',
+			             	            axisLabel : {
+			             	                formatter: '{value} kgce',
+			             	               textStyle:{color:'#fff'}
+			             	            }
+			             	        },
+			        	        {
+			        	            type : 'value',
+			        	            axisLabel : {
+			        	                formatter: '{value} °C',
+			        	                textStyle:{color:'#fff'}
+			        	            },
+			        	            splitLine:{show:false},
+			        	        	
+			        	        }
+			        	    ],
+			        	    series : [
+			
+								{
+								    name:'综合情况',
+								    type:'bar',
+								    data:[100, 150, 120, 130, 180, 175],
+									barWidth:'50',
+			                        itemStyle: {
+			                            normal: {
+			                                color: function (params) {
+			                                    // build a color map as your need.
+			                                    var colorList = [
+			                                        '#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+			                                        '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+			                                        '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'
+			                                    ];
+			                                    return colorList[params.dataIndex]
+			                                },
+			                                label: {
+			                                    show: true,
+			                                    position: 'top',
+			                                    formatter: '{c}'
+			                                }
+			                            }
+			                        }
+								},
+			        	       // {
+			        	           // name:'温度',
+			        	          //  type:'line',
+			        	          //  data:[11, 11, 15, 13, 12, 13],
+			        	         //   markPoint : {
+			        	          //      data : [
+			        	          //          {type : 'max', name: '最大值'},
+			        	          //          {type : 'min', name: '最小值'}
+			        	          //      ],
+			                      //      itemStyle:{normal:{'color':'rgba(250,0,0,0.8)'}}
+			        	         //   },
+			        	          //  markLine : {
+			        	          //      data : [
+			        	          //          {type : 'average', name: '平均值'}
+			        	           //     ]
+			        	          //  },
+			        	         //   yAxisIndex: 1
+			        	       // }
+			
+			        	    ]
+			        	};
+					myChart3.setOption(option3);
+			        // 基于准备好的dom，初始化echarts实例
+			        var myChart = echarts.init(document.getElementById('test'));
+			
+			        // 指定图表的配置项和数据
+			       var option = {
+			    tooltip : {
+			        trigger: 'axis',
+			        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+			            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+			        }
+			    },
+			    legend: {
+			        data:['有害气体', '有利气体'],
+			        textStyle:{color:'#fff'}
+			    },
+			    
+			    grid: {
+			        left: '4%',
+			        right: '4%',
+			        bottom: '4%',
+			        containLabel: true
+			    },
+			    
+			    xAxis : [
+			        {
+			        	type : 'category',
+			            data : ['氧气','稀有气体','氮气','二氧化碳','水蒸气'],
+			        	splitLine:{show:false},
+			        	axisLabel:{textStyle:{color:'#fff'}}
+			        	
+			        }
+			    ],
+			    yAxis : [
+			        {
+			        	 type : 'value',
+			        	 splitLine:{
+			        		 show:true,
+			        		 lineStyle:{
+			        			 width: 1,
+			        			 type: 'dotted'
+			        		 }
+			        		},
+			            	axisLabel:{textStyle:{color:'#fff'}}
+			        }
+			    ],
+			    axis:{
+			    	splitLine:{show: false}
+			    },
+			    series : [
+			        {
+			            name:'有害气体',
+			            type:'line',
+			            stack: 'PUE',
+			            itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
+			            data:[16, 10, 20, 13, 12, 15]
+			        },
+			        {
+			            name:'有利气体',
+			            type:'line',
+			            stack: 'PUE',
+			            itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
+			            data:[14, 7, 16, 11, 9, 12]
+			        }
+			    ]
+			};
+			
+			        // 使用刚指定的配置项和数据显示图表。
+			        myChart.setOption(option);
+			        
+			        //营业厅能耗
+			        var hallChart = echarts.init(document.getElementById('hallLost'));
+			        var option3 = {
+			        	    tooltip : {
+			        	        trigger: 'axis',
+			        	        textStyle:{color:'#fff'}
+			        	    },
+			        	    legend: {
+			        	        data:['空气湿度','']
+			        	    },
+			        	    toolbox: {
+			        	        show : true,
+			        	        feature : {
+			        	            saveAsImage: {}
+			        	        }
+			        	    },
+			        	    grid: {
+			        	        left: '4%',
+			        	        right: '4%',
+			        	        bottom: '4%',
+			        	        containLabel: true
+			        	    },
+			        	    xAxis : [
+			        	        {
+			        	            type : 'category',
+			        	            boundaryGap : true,
+			        	            data : ['一号园区','二号园区','三号园区','四号园区','五号园区','六号园区'],
+			        	            splitLine:{show:false},
+			        	        	axisLabel:{textStyle:{color:'#fff'}}
+			        	        }
+			        	    ],
+			        	    yAxis : [
+			        	             {
+			             	            type : 'value',
+			             	           splitNumber:4,
+			             	           splitLine:{
+			             	        		 show:true,
+			             	        		 lineStyle:{
+			             	        			 width: 1,
+			             	        			 type: 'dotted'
+			             	        		 }
+			             	        		},
+			             	            axisLabel : {
+			             	                formatter: '{value}',
+			             	               textStyle:{color:'#fff'}
+			             	            }
+			             	        }
+			        	             
+			        	    ],
+			        	    series : [
+								{
+								    name:'空气湿度',
+								    type:'line',
+								    data:[10, 7, 19, 13, 18, 20],
+			                        itemStyle: {
+			                            normal: {
+			                                label: {
+			                                    show: true,
+			                                    position: 'top',
+			                                    formatter: '{c}'
+			                                }
+			                            }
+			                        }
+								}
+			        	    ]
+			        	};
+					hallChart.setOption(option3);
+			        
+					//土壤湿度
+			        var stationChart = echarts.init(document.getElementById('stationLost'));
+			        var stationOption = {
+			        	    tooltip : {
+			        	        trigger: 'axis',
+			        	        textStyle:{color:'#fff'}
+			        	    },
+			        	    legend: {
+			        	        data:['土壤湿度','']
+			        	    },
+			        	    toolbox: {
+			        	        show : true,
+			        	        feature : {
+			        	            saveAsImage: {}
+			        	        }
+			        	    },
+			        	    grid: {
+			        	        left: '4%',
+			        	        right: '4%',
+			        	        bottom: '4%',
+			        	        containLabel: true
+			        	    },
+			        	    xAxis : [
+			        	        {
+			        	            type : 'category',
+			        	            boundaryGap : true,
+			        	            data : ['一号园区','二号园区','三号园区','四号园区','五号园区'],
+			        	            splitLine:{show:false},
+			        	        	axisLabel:{textStyle:{color:'#fff'}}
+			        	        }
+			        	    ],
+			        	    yAxis : [
+			        	             {
+			             	            type : 'value',
+			             	            axisLabel : {
+			             	                formatter: '{value}',
+			             	               textStyle:{color:'#fff'}
+			             	            },
+			             	            splitLine:{
+			            	        		 show:true,
+			            	        		 lineStyle:{
+			            	        			 width: 1,
+			            	        			 type: 'dotted'
+			            	        		 }
+			            	        		}
+			             	        }
+			        	    ],
+			        	    series : [
+			
+								{
+								    name:'土壤湿度',
+								    type:'bar',
+								    data:[100, 150, 120,80],
+									barWidth:'30',
+			                        itemStyle: {
+			                            normal: {
+			                                color: function (params) {
+			                                    // build a color map as your need.
+			                                    var colorList = [
+			                                        '#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+			                                        '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+			                                        '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'
+			                                    ];
+			                                    return colorList[params.dataIndex]
+			                                },
+			                                label: {
+			                                    show: true,
+			                                    position: 'top',
+			                                    formatter: '{c}'
+			                                }
+			                            }
+			                        }
+								}
+			        	    ]
+			        	};
+					stationChart.setOption(stationOption);
+					
+					//风力
+			        var bChart = echarts.init(document.getElementById('buildingLost'));
+			        var bOption = {
+			        	    tooltip : {
+			        	        trigger: 'axis',
+			        	        textStyle:{color:'#fff'}
+			        	    },
+			        	    legend: {
+			        	        data:['风力','']
+			        	    },
+			        	    toolbox: {
+			        	        show : true,
+			        	        feature : {
+			        	            saveAsImage: {}
+			        	        }
+			        	    },
+			        	    grid: {
+			        	        left: '4%',
+			        	        right: '4%',
+			        	        bottom: '4%',
+			        	        containLabel: true
+			        	    },
+			        	    xAxis : [
+			        	        {
+			        	            type : 'category',
+			        	            boundaryGap : true,
+			        	            data : [''],
+			        	            splitLine:{show:false},
+			        	        	axisLabel:{textStyle:{color:'#fff'}}
+			        	        }
+			        	    ],
+			        	    yAxis : [
+			        	             {
+			             	            type : 'value',
+			             	            axisLabel : {
+			             	                formatter: '{value}',
+			             	               textStyle:{color:'#fff'}
+			             	            },
+			             	            splitLine:{
+			             	        		 show:true,
+			             	        		 lineStyle:{
+			             	        			 width: 1,
+			             	        			 type: 'dotted'
+			             	        		 }
+			             	        		}
+			             	        }
+			        	    ],
+			        	    series : [
+			
+								{
+								    name:'风力',
+								    type:'bar',
+								    data:[300],
+									barWidth:'50',
+			                        itemStyle: {
+			                            normal: {
+			                                color: function (params) {
+			                                    // build a color map as your need.
+			                                    var colorList = [
+			                                         '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+			                                        '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+			                                        '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'
+			                                    ];
+			                                    return colorList[params.dataIndex]
+			                                },
+			                                label: {
+			                                    show: true,
+			                                    position: 'top',
+			                                    formatter: '{c}'
+			                                }
+			                            }
+			                        }
+								}
+			        	    ]
+			        	};
+					bChart.setOption(bOption);
+					
+					//光感
+			        var fChart = echarts.init(document.getElementById('floorLost'));
+			        var fOption = {
+			        	    tooltip : {
+			        	        trigger: 'axis',
+			        	        textStyle:{color:'#fff'}
+			        	    },
+			        	    legend: {
+			        	        data:['每块区域光感','']
+			        	    },
+			        	    toolbox: {
+			        	        show : true,
+			        	        feature : {
+			        	            saveAsImage: {}
+			        	        }
+			        	    },
+			        	    grid: {
+			        	        left: '4%',
+			        	        right: '4%',
+			        	        bottom: '4%',
+			        	        containLabel: true
+			        	    },
+			        	    xAxis : [
+			        	        {
+			        	            type : 'category',
+			        	            boundaryGap : true,
+			        	            data : ['1号','2号','3号','4号','5号'],
+			        	            splitLine:{show:false},
+			        	        	axisLabel:{textStyle:{color:'#fff'}}
+			        	        }
+			        	    ],
+			        	    yAxis : [
+			        	             {
+			             	            type : 'value',
+			             	           splitNumber:4,
+			             	           splitLine:{
+			             	        		 show:true,
+			             	        		 lineStyle:{
+			             	        			 width: 1,
+			             	        			 type: 'dotted'
+			             	        		 }
+			             	        		},
+			             	            axisLabel : {
+			             	                formatter: '{value}',
+			             	               textStyle:{color:'#fff'}
+			             	            }
+			             	        }
+			        	             
+			        	    ],
+			        	    series : [
+								{
+								    name:'光感',
+								    type:'line',
+								    data:[10, 37, 39, 23, 18, 20],
+			                        itemStyle: {
+			                            normal: {
+			                                label: {
+			                                    show: true,
+			                                    position: 'top',
+			                                    formatter: '{c}'
+			                                }
+			                            }
+			                        }
+								}
+			        	    ]
+			        	};
+					fChart.setOption(fOption);
+					//
+			        var dChart = echarts.init(document.getElementById('departmentLost'));
+			        var dOption = {
+			        	    tooltip: {
+			        	        trigger: 'item',
+			        	        formatter: "{a} <br/>{b}: {c}kwh ({d}%)",
+			        	        textStyle:{color:'#fff'}
+			        	    },
+			        	    legend: {
+			        	        orient: 'vertical',
+			        	        x: 'left',
+			        	        data:['1号','2号','3号','4号','5号'],
+			        	    	textStyle:{color:'#fff'}
+			        	    },
+			        	    series: [
+			        	        {
+			        	            name:'',
+			        	            type:'pie',
+			        	            radius: ['30%', '50%'],
+			        	            center: ['65%', '70%'], 
+			        	            avoidLabelOverlap: true,
+			        	            label: {
+			        	                normal: {
+			        	                    show: true,
+			        	                    formatter: '{b}:{c}kwh({d}%)',
+			        	                    position: 'left'
+			        	                }
+			        	            },
+			        	            labelLine: {
+			        	                normal: {
+			        	                    show: true
+			        	                }
+			        	            },
+			        	            data:[
+			        	                {value:23, name:'1号'},
+			        	                {value:40, name:'2号'},
+			        	                {value:30, name:'3号'},
+			        	                {value:10, name:'4号'},
+			        	                {value:15, name:'5号'},
+			        	            ]
+			        	        }
+			        	    ]
+			        	};
+			        dChart.setOption(dOption);
+			        
+			      //排名
+			        var rChart = echarts.init(document.getElementById('departmentRank'));
+			        var rOption = {
+			        	    tooltip : {
+			        	        trigger: 'axis',
+			        	        textStyle:{color:'#fff'}
+			        	    },
+			        	    legend: {
+			        	        data:['光感','']
+			        	    },
+			        	    toolbox: {
+			        	        show : true,
+			        	        feature : {
+			        	            saveAsImage: {}
+			        	        }
+			        	    },
+			        	    grid: {
+			        	        left: '4%',
+			        	        right: '4%',
+			        	        bottom: '4%',
+			        	        containLabel: true
+			        	    },
+			        	    xAxis : [
+			        	        {
+			        	            type : 'category',
+			        	            boundaryGap : true,
+			        	            data : ['1号','2号','3号','4号','5号'],
+			        	            splitLine:{show:false},
+			        	        	axisLabel:{textStyle:{color:'#fff'}}
+			        	        }
+			        	    ],
+			        	    yAxis : [
+			        	             {
+			             	            type : 'value',
+			             	            axisLabel : {
+			             	                formatter: '{value}',
+			             	               textStyle:{color:'#fff'}
+			             	            },
+			             	            splitLine:{
+			            	        		 show:true,
+			            	        		 lineStyle:{
+			            	        			 width: 1,
+			            	        			 type: 'dotted'
+			            	        		 }
+			            	        		}
+			             	        }
+			        	    ],
+			        	    series : [
+			
+								{
+								    name:'基站能耗',
+								    type:'bar',
+								    data:[40, 30, 23,15,10],
+									barWidth:'30',
+			                        itemStyle: {
+			                            normal: {
+			                                color: function (params) {
+			                                    // build a color map as your need.
+			                                    var colorList = [
+			                                        '#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+			                                        '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+			                                        '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'
+			                                    ];
+			                                    return colorList[params.dataIndex]
+			                                },
+			                                label: {
+			                                    show: true,
+			                                    position: 'top',
+			                                    formatter: '{c}'
+			                                }
+			                            }
+			                        }
+								}
+			        	    ]
+			        	};
+					rChart.setOption(rOption);
+					
+			    </script>
+			    </body>
+			</html>
+			
